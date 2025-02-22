@@ -72,10 +72,13 @@ public class AssetPool {
 
     public static Sound addSound(String fileName, Sound sound){
         if (AssetPool.sounds.containsKey(fileName)){
+            System.out.println("Sound already loaded: " + fileName);
             return AssetPool.sounds.get(fileName);
-        } else{
+        } else {
+            System.out.println("Loading sound: " + fileName);
             AssetPool.sounds.put(fileName, sound);
             return sound;
         }
     }
+    
 }

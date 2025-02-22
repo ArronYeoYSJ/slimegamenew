@@ -138,8 +138,13 @@ public class Scene extends SceneMaster {
         AssetPool.getMaterial("checkerboard.png");
         AssetPool.addSpriteSheet("marioSheet.png", new SpriteSheet(new Material("marioSheet.png"),26, 16, 16, 0));
         AssetPool.addSpriteSheet("mario_blocks.png", new SpriteSheet(new Material("mario_blocks.png"), 96, 8, 12, 0));
-        AssetPool.addSound("mario_theme", new Sound("mario_theme.ogg", true));
-        AssetPool.addSound("coin.ogg", new Sound("coin.ogg", false));
+        if (AssetPool.getSound("mario_theme.ogg") == null) {
+            System.out.println("Adding sound");
+            AssetPool.addSound("mario_theme", new Sound("mario_theme.ogg", true));
+        }
+        if (AssetPool.getSound("coin") == null) {
+            AssetPool.addSound("coin", new Sound("coin.ogg", false));
+        }
  
     }
 
