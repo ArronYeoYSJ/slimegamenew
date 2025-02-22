@@ -1,6 +1,7 @@
 package com.arron_yeoman.scenes;
 
 import java.beans.beancontext.BeanContextServiceRevokedEvent;
+import java.time.chrono.ThaiBuddhistChronology;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -232,4 +233,11 @@ public class Scene extends SceneMaster {
     }
     
 
+    public void setGameOver(){
+        System.out.println("Game over");
+        SpriteRenderer over = new SpriteRenderer(new Sprite(AssetPool.getMaterial("gameover.jpg")));
+        GameObject go = new GameObject("gameover", new Transform(new Vector2(0, 0), new Vector2(1080, 720)), 2);
+        go.addComponent(over);
+        this.batchRenderer.add(go);
+    }
 }

@@ -22,7 +22,7 @@ public class BatchRenderer {
         }
     }
 
-    private void add(SpriteRenderer spr){
+    public void add(SpriteRenderer spr){
         boolean added = false;
         for (RenderBatch batch : batches){
             if (batch.hasRoom() && spr.gameObject.getLayer() == batch.getLayer()){

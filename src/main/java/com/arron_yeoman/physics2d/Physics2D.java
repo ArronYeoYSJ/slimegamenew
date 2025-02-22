@@ -4,6 +4,7 @@ package com.arron_yeoman.physics2d;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.arron_yeoman.engine.Window;
 import com.arron_yeoman.engine.gameobjects.GameObject;
 import com.arron_yeoman.maths.Vector2;
 import com.arron_yeoman.observer.EventSystem;
@@ -130,6 +131,10 @@ public class Physics2D implements Observer{
             if (relativeNormal.y < -0.5f) {
                 EventSystem.notify(null, new Event(EventEnumerator.PLAYER_LAND));
             }
+        }
+        if (("Player".equals(rb1.gameObject.getName()) && "Goomba".equals(rb2.gameObject.getName())) ||
+            ("Player".equals(rb2.gameObject.getName()) && "Goomba".equals(rb1.gameObject.getName()))) {
+            Window.get().getCurrentScene().setGameOver();
         }
     
         if (relativeSpeed.dot(relativeNormal) > 0f) {

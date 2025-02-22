@@ -13,7 +13,7 @@ public abstract class SceneMaster {
 
     public abstract Camera getCamera();
 
-    //public abstract void setGameOver();
+    public abstract void setGameOver();
 
     
 }

@@ -22,6 +22,7 @@ com\arron_yeoman\maths\Functions.class
 com\arron_yeoman\physics2d\primitives\RayCastOut.class
 com\arron_yeoman\engine\io\ResourceLoader.class
 com\arron_yeoman\engine\gameobjects\components\goombaController.class
+com\arron_yeoman\engine\graphics\Renderer.old
 com\arron_yeoman\observer\events\Event.class
 com\arron_yeoman\scenes\StartScene.class
 com\arron_yeoman\maths\Vector4.class
